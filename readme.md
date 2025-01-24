@@ -34,7 +34,7 @@
 ![Insomnia](./resources/Insomnia.png)
 
 
-<img src="./resources/javascript-svgrepo-com.svg" width="20" class="filter-svg"/> [Insomnia Collection](./resources/Insomnia_2025-01-24.json)
+<img src="https://raw.githubusercontent.com/nunorelvao/gRPCDemo/refs/heads/main/resources/javascript-svgrepo-com.svg" width="20" class="filter-svg"/> [Insomnia Collection](./resources/Insomnia_2025-01-24.json)
 
 Usefull Link: https://binodmahto.medium.com/streaming-with-grpc-on-net-34a57be520a1
 
