@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+option csharp_namespace = "gRPCServer.Weather";
+import "google/protobuf/timestamp.proto";
+
+package weather;
+
+// The weather service definition.
+service WeatherService {
+  // Sends a current weather report
+  rpc CurrentWeatherUnary (WeatherForCityRequest) returns (WeatherResponse);
+
+  // Sends a current weather report stream from server
+  rpc CurrentWeatherStream (WeatherForCityRequest) returns (stream WeatherResponse);
+
+  // Sends a current weather report from server for each multiple client streams
+  rpc CurrentMultiWeatherStream (stream WeatherForCityRequest) returns (MultiWeatherResponse);
+
+  // Bidirectional weather report stream from server from multiple client streams
+  rpc CurrentMultiWeatherBidirectionalStream (stream WeatherForCityRequest) returns (stream WeatherResponse);
+}
+
+// The request message for weather.
+message WeatherForCityRequest {
+  string city = 1;
+  Units unit = 2;
+}
+
+// The response message for weather.
+message WeatherResponse {
+  double temperature = 1;
+  double feels_like = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  string city = 4;
+  Units unit = 5;
+}
+
+//array of WeatherResponses for stream client requests
+message MultiWeatherResponse{
+  repeated WeatherResponse weather = 1;
+}
+
+enum Units {
+  standard = 0;
+  metric = 1;
+  imperial = 2;
+}
