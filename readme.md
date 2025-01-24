@@ -34,13 +34,13 @@
 ![Insomnia](./resources/Insomnia.png)
 
 
-[<img src="./resources/javascript-svgrepo-com.svg" width="20" class="filter-svg"/> Insomnia Collection](./resources/Insomnia_2025-01-24.json)
+<img src="./resources/javascript-svgrepo-com.svg" width="20" class="filter-svg"/> [Insomnia Collection](./resources/Insomnia_2025-01-24.json)
 
 Usefull Link: https://binodmahto.medium.com/streaming-with-grpc-on-net-34a57be520a1
 
 <style>
 .filter-svg {
-    filter : invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+    filter : invert(58%) sepia(10%) saturate(3000%) hue-rotate(1deg) brightness(100%) contrast(150%);
     margin: 0px 10px -5px 0;
 }
 
